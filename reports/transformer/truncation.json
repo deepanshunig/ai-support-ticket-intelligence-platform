@@ -1,0 +1,12 @@
+{
+  "fit": {
+    "records": 7000,
+    "truncated_at_64": 18,
+    "max_tokens": 98
+  },
+  "development": {
+    "records": 1001,
+    "truncated_at_64": 1,
+    "max_tokens": 79
+  }
+}

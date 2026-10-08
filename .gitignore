@@ -1,0 +1,33 @@
+.venv/
+.runtime/
+.env
+.env.*
+!.env.example
+!.env.compose.example
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.pytest-temp/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+tmp/
+output/
+data/raw/*
+data/processed/*
+artifacts/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!artifacts/.gitkeep
+# Keep local integration probes and machine-specific runtime metadata out of Git.
+reports/integration/*.json
+reports/baselines/runtime_environment.json
+# These generated rows include request text from the source evaluation corpus.
+reports/**/errors.csv
+reports/final/official_test_errors.csv
+*.log
+.DS_Store
+Thumbs.db

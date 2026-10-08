@@ -1,0 +1,24 @@
+{
+  "partition": "development",
+  "confidence_kind": "uncalibrated",
+  "models": {
+    "logistic_regression": {
+      "records": 1001,
+      "intent_accuracy": 0.8671328671328671,
+      "macro_f1": 0.8643792176111074,
+      "top_3_accuracy": 0.9590409590409591,
+      "demo_team_accuracy": 0.9530469530469531,
+      "negative_log_likelihood": 0.6939434231599528,
+      "multiclass_brier_sum": 0.2547600560168909
+    },
+    "naive_bayes": {
+      "records": 1001,
+      "intent_accuracy": 0.8221778221778222,
+      "macro_f1": 0.8044270926348338,
+      "top_3_accuracy": 0.932067932067932,
+      "demo_team_accuracy": 0.922077922077922,
+      "negative_log_likelihood": 0.7841532336518364,
+      "multiclass_brier_sum": 0.29429931074203275
+    }
+  }
+}

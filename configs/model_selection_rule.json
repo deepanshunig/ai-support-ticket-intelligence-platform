@@ -1,0 +1,9 @@
+{
+  "version": "local-demo-selection-v1",
+  "selection_partition": "development",
+  "primary_measure": "macro_f1",
+  "quality_tolerance": 0.02,
+  "rule": "Prefer the lower-latency candidate if its development macro-F1 is within 0.02 of the leader; otherwise investigate deployment of the quality leader before final test evaluation.",
+  "measurement_note": "Frozen DistilBERT uses four encoder threads; TF-IDF uses one. Timings are local and not a hardware-normalized architecture benchmark.",
+  "limitations": "Prototype engineering choice, not a bank acceptance criterion. Frozen DistilBERT is not encoder fine-tuning."
+}

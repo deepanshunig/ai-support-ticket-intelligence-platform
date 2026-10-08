@@ -1,0 +1,119 @@
+:root {
+  --workspace-navy: #17344b;
+  --workspace-teal: #178b87;
+  --workspace-border: #dbe7eb;
+}
+
+.stApp {
+  background: linear-gradient(135deg, #f1f7f8 0%, #f8fafb 42%, #f4f8fa 100%);
+  color: var(--workspace-navy);
+}
+
+[data-testid="stHeader"] {
+  background: rgba(248, 250, 251, 0.93);
+}
+
+.block-container {
+  max-width: 1420px;
+  padding-top: 2.6rem;
+  padding-bottom: 3rem;
+}
+
+.workspace-label {
+  color: #3f737c;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  margin-bottom: 0.55rem;
+}
+
+h1, h2, h3 {
+  color: var(--workspace-navy);
+}
+
+h1 {
+  font-size: 2.35rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.045em;
+}
+
+.service-ready {
+  display: inline-block;
+  padding: 0.45rem 0.8rem;
+  margin: 0.4rem 0 0.9rem;
+  background: #e4f3ed;
+  color: #24674f;
+  border: 1px solid #c8e4d7;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+[data-testid="stSidebar"] {
+  background: #eaf2f5;
+  border-right: 1px solid #d5e2e8;
+}
+
+[data-testid="stForm"] {
+  background: #fff;
+  border: 1px solid var(--workspace-border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 18px rgba(23, 52, 75, 0.035);
+}
+
+[data-testid="stMetric"] {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--workspace-border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+}
+
+[data-testid="stMetricValue"] {
+  color: var(--workspace-navy);
+  font-size: 1.35rem;
+}
+
+[data-testid="stTabs"] [data-baseweb="tab-list"] {
+  gap: 1.7rem;
+  border-bottom: 1px solid var(--workspace-border);
+}
+
+[data-testid="stTabs"] [data-baseweb="tab"] {
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+}
+
+[data-testid="stTabs"] [aria-selected="true"] {
+  color: var(--workspace-teal);
+}
+
+[data-testid="stTabs"] [data-baseweb="tab-highlight"] {
+  background: var(--workspace-teal);
+}
+
+button[kind="primary"], button[data-testid="stBaseButton-primary"] {
+  background: var(--workspace-teal) !important;
+  border-color: var(--workspace-teal) !important;
+  color: #fff !important;
+}
+
+button {
+  border-radius: 8px !important;
+}
+
+[data-testid="stExpander"] {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 10px;
+}
+
+@media (max-width: 760px) {
+  .block-container {
+    padding-top: 1.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  h1 {
+    font-size: 1.85rem !important;
+  }
+}

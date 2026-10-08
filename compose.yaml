@@ -1,0 +1,75 @@
+services:
+  database:
+    image: mysql:8.4.11
+    environment:
+      MYSQL_DATABASE: ticket_intelligence
+      MYSQL_USER: ticket_app
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD in .env.compose}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD in .env.compose}
+    volumes:
+      - ticket_mysql_data:/var/lib/mysql
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - mysqladmin ping --host=127.0.0.1 --user="$${MYSQL_USER}" --password="$${MYSQL_PASSWORD}" --silent
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+  api:
+    build: .
+    command: ["python", "-m", "ticket_intelligence.api.main"]
+    environment:
+      TICKET_ENVIRONMENT: production
+      TICKET_LOG_LEVEL: INFO
+      TICKET_API_HOST: 0.0.0.0
+      TICKET_API_PORT: 8000
+      TICKET_DATABASE_URL: mysql+pymysql://ticket_app:${MYSQL_PASSWORD}@database:3306/ticket_intelligence?charset=utf8mb4
+      TICKET_REVIEWER_TOKEN: ${TICKET_REVIEWER_TOKEN:?Set TICKET_REVIEWER_TOKEN in .env.compose}
+      TICKET_REVIEWER_ID: demo-reviewer
+      TICKET_WEBHOOK_URL: ${TICKET_WEBHOOK_URL:-}
+      TICKET_WEBHOOK_SECRET: ${TICKET_WEBHOOK_SECRET:-}
+      TICKET_ARTIFACT_DIR: /app/artifacts/baselines
+      TICKET_TEAM_MAPPING_PATH: /app/configs/team_mapping.json
+      TICKET_POLICY_PATH: /app/artifacts/routing/policy.json
+    volumes:
+      - ./artifacts:/app/artifacts:ro
+      - ./configs/team_mapping.json:/app/configs/team_mapping.json:ro
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ready', timeout=3)
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    depends_on:
+      database:
+        condition: service_healthy
+    restart: unless-stopped
+
+  dashboard:
+    build: .
+    command:
+      - streamlit
+      - run
+      - ui/app.py
+      - --server.address=0.0.0.0
+      - --server.port=8501
+      - --server.headless=true
+    environment:
+      TICKET_API_BASE_URL: http://api:8000
+      TICKET_REVIEWER_TOKEN: ${TICKET_REVIEWER_TOKEN:?Set TICKET_REVIEWER_TOKEN in .env.compose}
+    ports:
+      - 127.0.0.1:8501:8501
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  ticket_mysql_data:

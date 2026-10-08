@@ -1,0 +1,823 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "split_algorithm": "StratifiedGroupKFold(n_splits=10, shuffle=True)",
+  "fold_policy": {
+    "development": [
+      0
+    ],
+    "calibration": [
+      1
+    ],
+    "policy": [
+      2
+    ],
+    "fit": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "normalization": "lowercase; collapse whitespace; strip surrounding whitespace",
+  "label_mapping": [
+    {
+      "label_id": 0,
+      "category": "card_arrival"
+    },
+    {
+      "label_id": 1,
+      "category": "card_linking"
+    },
+    {
+      "label_id": 2,
+      "category": "exchange_rate"
+    },
+    {
+      "label_id": 3,
+      "category": "card_payment_wrong_exchange_rate"
+    },
+    {
+      "label_id": 4,
+      "category": "extra_charge_on_statement"
+    },
+    {
+      "label_id": 5,
+      "category": "pending_cash_withdrawal"
+    },
+    {
+      "label_id": 6,
+      "category": "fiat_currency_support"
+    },
+    {
+      "label_id": 7,
+      "category": "card_delivery_estimate"
+    },
+    {
+      "label_id": 8,
+      "category": "automatic_top_up"
+    },
+    {
+      "label_id": 9,
+      "category": "card_not_working"
+    },
+    {
+      "label_id": 10,
+      "category": "exchange_via_app"
+    },
+    {
+      "label_id": 11,
+      "category": "lost_or_stolen_card"
+    },
+    {
+      "label_id": 12,
+      "category": "age_limit"
+    },
+    {
+      "label_id": 13,
+      "category": "pin_blocked"
+    },
+    {
+      "label_id": 14,
+      "category": "contactless_not_working"
+    },
+    {
+      "label_id": 15,
+      "category": "top_up_by_bank_transfer_charge"
+    },
+    {
+      "label_id": 16,
+      "category": "pending_top_up"
+    },
+    {
+      "label_id": 17,
+      "category": "cancel_transfer"
+    },
+    {
+      "label_id": 18,
+      "category": "top_up_limits"
+    },
+    {
+      "label_id": 19,
+      "category": "wrong_amount_of_cash_received"
+    },
+    {
+      "label_id": 20,
+      "category": "card_payment_fee_charged"
+    },
+    {
+      "label_id": 21,
+      "category": "transfer_not_received_by_recipient"
+    },
+    {
+      "label_id": 22,
+      "category": "supported_cards_and_currencies"
+    },
+    {
+      "label_id": 23,
+      "category": "getting_virtual_card"
+    },
+    {
+      "label_id": 24,
+      "category": "card_acceptance"
+    },
+    {
+      "label_id": 25,
+      "category": "top_up_reverted"
+    },
+    {
+      "label_id": 26,
+      "category": "balance_not_updated_after_cheque_or_cash_deposit"
+    },
+    {
+      "label_id": 27,
+      "category": "card_payment_not_recognised"
+    },
+    {
+      "label_id": 28,
+      "category": "edit_personal_details"
+    },
+    {
+      "label_id": 29,
+      "category": "why_verify_identity"
+    },
+    {
+      "label_id": 30,
+      "category": "unable_to_verify_identity"
+    },
+    {
+      "label_id": 31,
+      "category": "get_physical_card"
+    },
+    {
+      "label_id": 32,
+      "category": "visa_or_mastercard"
+    },
+    {
+      "label_id": 33,
+      "category": "topping_up_by_card"
+    },
+    {
+      "label_id": 34,
+      "category": "disposable_card_limits"
+    },
+    {
+      "label_id": 35,
+      "category": "compromised_card"
+    },
+    {
+      "label_id": 36,
+      "category": "atm_support"
+    },
+    {
+      "label_id": 37,
+      "category": "direct_debit_payment_not_recognised"
+    },
+    {
+      "label_id": 38,
+      "category": "passcode_forgotten"
+    },
+    {
+      "label_id": 39,
+      "category": "declined_cash_withdrawal"
+    },
+    {
+      "label_id": 40,
+      "category": "pending_card_payment"
+    },
+    {
+      "label_id": 41,
+      "category": "lost_or_stolen_phone"
+    },
+    {
+      "label_id": 42,
+      "category": "request_refund"
+    },
+    {
+      "label_id": 43,
+      "category": "declined_transfer"
+    },
+    {
+      "label_id": 44,
+      "category": "Refund_not_showing_up"
+    },
+    {
+      "label_id": 45,
+      "category": "declined_card_payment"
+    },
+    {
+      "label_id": 46,
+      "category": "pending_transfer"
+    },
+    {
+      "label_id": 47,
+      "category": "terminate_account"
+    },
+    {
+      "label_id": 48,
+      "category": "card_swallowed"
+    },
+    {
+      "label_id": 49,
+      "category": "transaction_charged_twice"
+    },
+    {
+      "label_id": 50,
+      "category": "verify_source_of_funds"
+    },
+    {
+      "label_id": 51,
+      "category": "transfer_timing"
+    },
+    {
+      "label_id": 52,
+      "category": "reverted_card_payment?"
+    },
+    {
+      "label_id": 53,
+      "category": "change_pin"
+    },
+    {
+      "label_id": 54,
+      "category": "beneficiary_not_allowed"
+    },
+    {
+      "label_id": 55,
+      "category": "transfer_fee_charged"
+    },
+    {
+      "label_id": 56,
+      "category": "receiving_money"
+    },
+    {
+      "label_id": 57,
+      "category": "failed_transfer"
+    },
+    {
+      "label_id": 58,
+      "category": "transfer_into_account"
+    },
+    {
+      "label_id": 59,
+      "category": "verify_top_up"
+    },
+    {
+      "label_id": 60,
+      "category": "getting_spare_card"
+    },
+    {
+      "label_id": 61,
+      "category": "top_up_by_cash_or_cheque"
+    },
+    {
+      "label_id": 62,
+      "category": "order_physical_card"
+    },
+    {
+      "label_id": 63,
+      "category": "virtual_card_not_working"
+    },
+    {
+      "label_id": 64,
+      "category": "wrong_exchange_rate_for_cash_withdrawal"
+    },
+    {
+      "label_id": 65,
+      "category": "get_disposable_virtual_card"
+    },
+    {
+      "label_id": 66,
+      "category": "top_up_failed"
+    },
+    {
+      "label_id": 67,
+      "category": "balance_not_updated_after_bank_transfer"
+    },
+    {
+      "label_id": 68,
+      "category": "cash_withdrawal_not_recognised"
+    },
+    {
+      "label_id": 69,
+      "category": "exchange_charge"
+    },
+    {
+      "label_id": 70,
+      "category": "top_up_by_card_charge"
+    },
+    {
+      "label_id": 71,
+      "category": "activate_my_card"
+    },
+    {
+      "label_id": 72,
+      "category": "cash_withdrawal_charge"
+    },
+    {
+      "label_id": 73,
+      "category": "card_about_to_expire"
+    },
+    {
+      "label_id": 74,
+      "category": "apple_pay_or_google_pay"
+    },
+    {
+      "label_id": 75,
+      "category": "verify_my_identity"
+    },
+    {
+      "label_id": 76,
+      "category": "country_support"
+    }
+  ],
+  "source_checksums_sha256": {
+    "categories.json": "53261da888122daf2d120d925458631d9619e15d82e56052e7a42e535ce32b63",
+    "LICENSE": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661",
+    "provenance.json": "0257cd355a105ed131d1325d6e3b87e57f9ef9360cc4735979b8d03fbcbce645",
+    "test.csv": "d12d6e3bc4c3103966ae786dc435913c0c563dfa328f5a3646d0e62cfeeb474d",
+    "train.csv": "b06e26ac675513959a63135f11b94ea7786ed02da65db93a5650d8838cbc664b"
+  },
+  "package_versions": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2",
+    "scikit-learn": "1.9.1"
+  },
+  "official_train": {
+    "records": 10003,
+    "empty_or_invalid_text_records": 0,
+    "empty_or_invalid_category_records": 0,
+    "exact_duplicate_text_excess_records": 0,
+    "normalized_unique_groups": 9999,
+    "normalized_duplicate_groups": 4,
+    "normalized_duplicate_excess_records": 4,
+    "conflicting_label_groups": 0,
+    "conflicting_label_details": [],
+    "unknown_labels": [],
+    "missing_labels": [],
+    "class_counts": {
+      "card_arrival": 153,
+      "card_linking": 139,
+      "exchange_rate": 112,
+      "card_payment_wrong_exchange_rate": 167,
+      "extra_charge_on_statement": 166,
+      "pending_cash_withdrawal": 143,
+      "fiat_currency_support": 126,
+      "card_delivery_estimate": 112,
+      "automatic_top_up": 127,
+      "card_not_working": 112,
+      "exchange_via_app": 118,
+      "lost_or_stolen_card": 82,
+      "age_limit": 110,
+      "pin_blocked": 115,
+      "contactless_not_working": 35,
+      "top_up_by_bank_transfer_charge": 111,
+      "pending_top_up": 149,
+      "cancel_transfer": 157,
+      "top_up_limits": 97,
+      "wrong_amount_of_cash_received": 180,
+      "card_payment_fee_charged": 187,
+      "transfer_not_received_by_recipient": 171,
+      "supported_cards_and_currencies": 129,
+      "getting_virtual_card": 98,
+      "card_acceptance": 59,
+      "top_up_reverted": 146,
+      "balance_not_updated_after_cheque_or_cash_deposit": 181,
+      "card_payment_not_recognised": 168,
+      "edit_personal_details": 121,
+      "why_verify_identity": 121,
+      "unable_to_verify_identity": 102,
+      "get_physical_card": 106,
+      "visa_or_mastercard": 135,
+      "topping_up_by_card": 103,
+      "disposable_card_limits": 121,
+      "compromised_card": 86,
+      "atm_support": 87,
+      "direct_debit_payment_not_recognised": 182,
+      "passcode_forgotten": 105,
+      "declined_cash_withdrawal": 173,
+      "pending_card_payment": 159,
+      "lost_or_stolen_phone": 121,
+      "request_refund": 169,
+      "declined_transfer": 133,
+      "Refund_not_showing_up": 162,
+      "declined_card_payment": 153,
+      "pending_transfer": 148,
+      "terminate_account": 108,
+      "card_swallowed": 61,
+      "transaction_charged_twice": 175,
+      "verify_source_of_funds": 113,
+      "transfer_timing": 128,
+      "reverted_card_payment?": 161,
+      "change_pin": 122,
+      "beneficiary_not_allowed": 156,
+      "transfer_fee_charged": 172,
+      "receiving_money": 95,
+      "failed_transfer": 137,
+      "transfer_into_account": 113,
+      "verify_top_up": 126,
+      "getting_spare_card": 129,
+      "top_up_by_cash_or_cheque": 114,
+      "order_physical_card": 120,
+      "virtual_card_not_working": 41,
+      "wrong_exchange_rate_for_cash_withdrawal": 163,
+      "get_disposable_virtual_card": 97,
+      "top_up_failed": 145,
+      "balance_not_updated_after_bank_transfer": 171,
+      "cash_withdrawal_not_recognised": 160,
+      "exchange_charge": 121,
+      "top_up_by_card_charge": 114,
+      "activate_my_card": 159,
+      "cash_withdrawal_charge": 177,
+      "card_about_to_expire": 129,
+      "apple_pay_or_google_pay": 126,
+      "verify_my_identity": 104,
+      "country_support": 129
+    },
+    "character_length": {
+      "minimum": 13,
+      "maximum": 433,
+      "mean": 59.47375787263821,
+      "median": 47.0,
+      "p05": 26.0,
+      "p95": 151.89999999999964
+    },
+    "word_length": {
+      "minimum": 2,
+      "maximum": 79,
+      "mean": 11.949415175447365,
+      "median": 10.0,
+      "p05": 5.0,
+      "p95": 29.0
+    }
+  },
+  "official_test_integrity": {
+    "records": 3080,
+    "all_expected_labels_present": true,
+    "invalid_records": 0
+  },
+  "reference_counts": {
+    "published_train": 10003,
+    "published_test": 3080,
+    "matches_published_counts": true
+  },
+  "partitions": {
+    "fit": {
+      "records": 7000,
+      "unique_groups": 6999,
+      "class_counts": {
+        "card_arrival": 107,
+        "card_linking": 98,
+        "exchange_rate": 78,
+        "card_payment_wrong_exchange_rate": 117,
+        "extra_charge_on_statement": 115,
+        "pending_cash_withdrawal": 100,
+        "fiat_currency_support": 88,
+        "card_delivery_estimate": 78,
+        "automatic_top_up": 88,
+        "card_not_working": 78,
+        "exchange_via_app": 82,
+        "lost_or_stolen_card": 57,
+        "age_limit": 77,
+        "pin_blocked": 81,
+        "contactless_not_working": 25,
+        "top_up_by_bank_transfer_charge": 78,
+        "pending_top_up": 104,
+        "cancel_transfer": 111,
+        "top_up_limits": 68,
+        "wrong_amount_of_cash_received": 126,
+        "card_payment_fee_charged": 132,
+        "transfer_not_received_by_recipient": 120,
+        "supported_cards_and_currencies": 91,
+        "getting_virtual_card": 68,
+        "card_acceptance": 41,
+        "top_up_reverted": 102,
+        "balance_not_updated_after_cheque_or_cash_deposit": 127,
+        "card_payment_not_recognised": 117,
+        "edit_personal_details": 85,
+        "why_verify_identity": 85,
+        "unable_to_verify_identity": 72,
+        "get_physical_card": 74,
+        "visa_or_mastercard": 95,
+        "topping_up_by_card": 73,
+        "disposable_card_limits": 84,
+        "compromised_card": 59,
+        "atm_support": 61,
+        "direct_debit_payment_not_recognised": 128,
+        "passcode_forgotten": 73,
+        "declined_cash_withdrawal": 121,
+        "pending_card_payment": 111,
+        "lost_or_stolen_phone": 84,
+        "request_refund": 118,
+        "declined_transfer": 94,
+        "Refund_not_showing_up": 114,
+        "declined_card_payment": 107,
+        "pending_transfer": 103,
+        "terminate_account": 75,
+        "card_swallowed": 43,
+        "transaction_charged_twice": 122,
+        "verify_source_of_funds": 79,
+        "transfer_timing": 90,
+        "reverted_card_payment?": 113,
+        "change_pin": 85,
+        "beneficiary_not_allowed": 109,
+        "transfer_fee_charged": 121,
+        "receiving_money": 66,
+        "failed_transfer": 95,
+        "transfer_into_account": 79,
+        "verify_top_up": 88,
+        "getting_spare_card": 91,
+        "top_up_by_cash_or_cheque": 78,
+        "order_physical_card": 84,
+        "virtual_card_not_working": 29,
+        "wrong_exchange_rate_for_cash_withdrawal": 113,
+        "get_disposable_virtual_card": 69,
+        "top_up_failed": 102,
+        "balance_not_updated_after_bank_transfer": 120,
+        "cash_withdrawal_not_recognised": 112,
+        "exchange_charge": 85,
+        "top_up_by_card_charge": 80,
+        "activate_my_card": 112,
+        "cash_withdrawal_charge": 125,
+        "card_about_to_expire": 91,
+        "apple_pay_or_google_pay": 87,
+        "verify_my_identity": 72,
+        "country_support": 90
+      }
+    },
+    "development": {
+      "records": 1001,
+      "unique_groups": 1000,
+      "class_counts": {
+        "card_arrival": 15,
+        "card_linking": 14,
+        "exchange_rate": 11,
+        "card_payment_wrong_exchange_rate": 17,
+        "extra_charge_on_statement": 17,
+        "pending_cash_withdrawal": 15,
+        "fiat_currency_support": 13,
+        "card_delivery_estimate": 12,
+        "automatic_top_up": 13,
+        "card_not_working": 11,
+        "exchange_via_app": 12,
+        "lost_or_stolen_card": 8,
+        "age_limit": 11,
+        "pin_blocked": 11,
+        "contactless_not_working": 4,
+        "top_up_by_bank_transfer_charge": 11,
+        "pending_top_up": 15,
+        "cancel_transfer": 16,
+        "top_up_limits": 10,
+        "wrong_amount_of_cash_received": 18,
+        "card_payment_fee_charged": 18,
+        "transfer_not_received_by_recipient": 17,
+        "supported_cards_and_currencies": 13,
+        "getting_virtual_card": 10,
+        "card_acceptance": 6,
+        "top_up_reverted": 15,
+        "balance_not_updated_after_cheque_or_cash_deposit": 18,
+        "card_payment_not_recognised": 17,
+        "edit_personal_details": 12,
+        "why_verify_identity": 12,
+        "unable_to_verify_identity": 10,
+        "get_physical_card": 11,
+        "visa_or_mastercard": 13,
+        "topping_up_by_card": 10,
+        "disposable_card_limits": 12,
+        "compromised_card": 9,
+        "atm_support": 8,
+        "direct_debit_payment_not_recognised": 18,
+        "passcode_forgotten": 10,
+        "declined_cash_withdrawal": 17,
+        "pending_card_payment": 16,
+        "lost_or_stolen_phone": 13,
+        "request_refund": 17,
+        "declined_transfer": 13,
+        "Refund_not_showing_up": 16,
+        "declined_card_payment": 15,
+        "pending_transfer": 15,
+        "terminate_account": 11,
+        "card_swallowed": 6,
+        "transaction_charged_twice": 18,
+        "verify_source_of_funds": 12,
+        "transfer_timing": 13,
+        "reverted_card_payment?": 16,
+        "change_pin": 12,
+        "beneficiary_not_allowed": 15,
+        "transfer_fee_charged": 17,
+        "receiving_money": 10,
+        "failed_transfer": 14,
+        "transfer_into_account": 11,
+        "verify_top_up": 12,
+        "getting_spare_card": 13,
+        "top_up_by_cash_or_cheque": 12,
+        "order_physical_card": 12,
+        "virtual_card_not_working": 4,
+        "wrong_exchange_rate_for_cash_withdrawal": 17,
+        "get_disposable_virtual_card": 9,
+        "top_up_failed": 14,
+        "balance_not_updated_after_bank_transfer": 17,
+        "cash_withdrawal_not_recognised": 16,
+        "exchange_charge": 12,
+        "top_up_by_card_charge": 11,
+        "activate_my_card": 15,
+        "cash_withdrawal_charge": 17,
+        "card_about_to_expire": 13,
+        "apple_pay_or_google_pay": 13,
+        "verify_my_identity": 11,
+        "country_support": 13
+      }
+    },
+    "calibration": {
+      "records": 1001,
+      "unique_groups": 1000,
+      "class_counts": {
+        "card_arrival": 15,
+        "card_linking": 13,
+        "exchange_rate": 12,
+        "card_payment_wrong_exchange_rate": 17,
+        "extra_charge_on_statement": 17,
+        "pending_cash_withdrawal": 14,
+        "fiat_currency_support": 12,
+        "card_delivery_estimate": 11,
+        "automatic_top_up": 13,
+        "card_not_working": 12,
+        "exchange_via_app": 12,
+        "lost_or_stolen_card": 8,
+        "age_limit": 11,
+        "pin_blocked": 11,
+        "contactless_not_working": 3,
+        "top_up_by_bank_transfer_charge": 11,
+        "pending_top_up": 15,
+        "cancel_transfer": 15,
+        "top_up_limits": 10,
+        "wrong_amount_of_cash_received": 18,
+        "card_payment_fee_charged": 19,
+        "transfer_not_received_by_recipient": 17,
+        "supported_cards_and_currencies": 13,
+        "getting_virtual_card": 10,
+        "card_acceptance": 6,
+        "top_up_reverted": 15,
+        "balance_not_updated_after_cheque_or_cash_deposit": 18,
+        "card_payment_not_recognised": 17,
+        "edit_personal_details": 12,
+        "why_verify_identity": 12,
+        "unable_to_verify_identity": 10,
+        "get_physical_card": 11,
+        "visa_or_mastercard": 14,
+        "topping_up_by_card": 10,
+        "disposable_card_limits": 12,
+        "compromised_card": 9,
+        "atm_support": 9,
+        "direct_debit_payment_not_recognised": 18,
+        "passcode_forgotten": 11,
+        "declined_cash_withdrawal": 17,
+        "pending_card_payment": 16,
+        "lost_or_stolen_phone": 12,
+        "request_refund": 17,
+        "declined_transfer": 13,
+        "Refund_not_showing_up": 16,
+        "declined_card_payment": 15,
+        "pending_transfer": 15,
+        "terminate_account": 11,
+        "card_swallowed": 6,
+        "transaction_charged_twice": 17,
+        "verify_source_of_funds": 11,
+        "transfer_timing": 13,
+        "reverted_card_payment?": 16,
+        "change_pin": 13,
+        "beneficiary_not_allowed": 16,
+        "transfer_fee_charged": 17,
+        "receiving_money": 10,
+        "failed_transfer": 14,
+        "transfer_into_account": 11,
+        "verify_top_up": 13,
+        "getting_spare_card": 13,
+        "top_up_by_cash_or_cheque": 12,
+        "order_physical_card": 12,
+        "virtual_card_not_working": 4,
+        "wrong_exchange_rate_for_cash_withdrawal": 17,
+        "get_disposable_virtual_card": 9,
+        "top_up_failed": 14,
+        "balance_not_updated_after_bank_transfer": 17,
+        "cash_withdrawal_not_recognised": 16,
+        "exchange_charge": 12,
+        "top_up_by_card_charge": 11,
+        "activate_my_card": 16,
+        "cash_withdrawal_charge": 17,
+        "card_about_to_expire": 12,
+        "apple_pay_or_google_pay": 13,
+        "verify_my_identity": 11,
+        "country_support": 13
+      }
+    },
+    "policy": {
+      "records": 1001,
+      "unique_groups": 1000,
+      "class_counts": {
+        "card_arrival": 16,
+        "card_linking": 14,
+        "exchange_rate": 11,
+        "card_payment_wrong_exchange_rate": 16,
+        "extra_charge_on_statement": 17,
+        "pending_cash_withdrawal": 14,
+        "fiat_currency_support": 13,
+        "card_delivery_estimate": 11,
+        "automatic_top_up": 13,
+        "card_not_working": 11,
+        "exchange_via_app": 12,
+        "lost_or_stolen_card": 9,
+        "age_limit": 11,
+        "pin_blocked": 12,
+        "contactless_not_working": 3,
+        "top_up_by_bank_transfer_charge": 11,
+        "pending_top_up": 15,
+        "cancel_transfer": 15,
+        "top_up_limits": 9,
+        "wrong_amount_of_cash_received": 18,
+        "card_payment_fee_charged": 18,
+        "transfer_not_received_by_recipient": 17,
+        "supported_cards_and_currencies": 12,
+        "getting_virtual_card": 10,
+        "card_acceptance": 6,
+        "top_up_reverted": 14,
+        "balance_not_updated_after_cheque_or_cash_deposit": 18,
+        "card_payment_not_recognised": 17,
+        "edit_personal_details": 12,
+        "why_verify_identity": 12,
+        "unable_to_verify_identity": 10,
+        "get_physical_card": 10,
+        "visa_or_mastercard": 13,
+        "topping_up_by_card": 10,
+        "disposable_card_limits": 13,
+        "compromised_card": 9,
+        "atm_support": 9,
+        "direct_debit_payment_not_recognised": 18,
+        "passcode_forgotten": 11,
+        "declined_cash_withdrawal": 18,
+        "pending_card_payment": 16,
+        "lost_or_stolen_phone": 12,
+        "request_refund": 17,
+        "declined_transfer": 13,
+        "Refund_not_showing_up": 16,
+        "declined_card_payment": 16,
+        "pending_transfer": 15,
+        "terminate_account": 11,
+        "card_swallowed": 6,
+        "transaction_charged_twice": 18,
+        "verify_source_of_funds": 11,
+        "transfer_timing": 12,
+        "reverted_card_payment?": 16,
+        "change_pin": 12,
+        "beneficiary_not_allowed": 16,
+        "transfer_fee_charged": 17,
+        "receiving_money": 9,
+        "failed_transfer": 14,
+        "transfer_into_account": 12,
+        "verify_top_up": 13,
+        "getting_spare_card": 12,
+        "top_up_by_cash_or_cheque": 12,
+        "order_physical_card": 12,
+        "virtual_card_not_working": 4,
+        "wrong_exchange_rate_for_cash_withdrawal": 16,
+        "get_disposable_virtual_card": 10,
+        "top_up_failed": 15,
+        "balance_not_updated_after_bank_transfer": 17,
+        "cash_withdrawal_not_recognised": 16,
+        "exchange_charge": 12,
+        "top_up_by_card_charge": 12,
+        "activate_my_card": 16,
+        "cash_withdrawal_charge": 18,
+        "card_about_to_expire": 13,
+        "apple_pay_or_google_pay": 13,
+        "verify_my_identity": 10,
+        "country_support": 13
+      }
+    }
+  },
+  "generated_partition_group_overlap": 0,
+  "official_train_test_hash_overlap": {
+    "unique_groups": 7,
+    "training_records": 7,
+    "test_records": 7,
+    "group_hashes": [
+      "535668fa083e7033cfca4edcb4146af37a56423f4fd884d63c6bb669f95830f0",
+      "63e218aa0850510d23de271f4314b124f6288a7b5a3fe8caa42d58619edef3af",
+      "6ab160b14fccaeb716e2895a2cd202e2c97b0b192a26e93f7922c1fbc3f8840c",
+      "6fba0bce5eedd0fb815f52d1818ca8be0911639b753679ec4e9a2c6bce4180a5",
+      "724afa94f9a0ca7f0ae029058e1777a0f0ff81b9e3a6bba35ba95f77f12efaf3",
+      "767c4b5d0eec3a9caea346f0e0ff4910af9d2d66453d0738b470312ae8d67913",
+      "b2deffd6582e84c7703f24d7c6a79d999ca72bf9f9bed7ff573f56492142bb1a"
+    ],
+    "handling": "Reported only; raw records and official test split remain unchanged."
+  },
+  "notes": [
+    "Fold sizes are approximate because duplicate groups remain indivisible.",
+    "Conflicting-label duplicate groups are retained together and reported.",
+    "Official test labels are inspected only for schema/mapping integrity.",
+    "No model, calibration, threshold selection, or bank action is implemented here."
+  ]
+}

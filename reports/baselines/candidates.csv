@@ -1,0 +1,7 @@
+family,classifier_parameters,development_accuracy,development_macro_f1,training_seconds
+logistic_regression,"{'C': 1.0, 'max_iter': 1000, 'random_state': 42, 'solver': 'lbfgs'}",0.8341658341658341,0.8246037944441202,11.62522349995561
+logistic_regression,"{'C': 4.0, 'max_iter': 1000, 'random_state': 42, 'solver': 'lbfgs'}",0.8631368631368631,0.8570310005427613,14.931158799910918
+logistic_regression,"{'C': 10.0, 'max_iter': 1000, 'random_state': 42, 'solver': 'lbfgs'}",0.8671328671328671,0.8643792176111076,13.807343800086528
+naive_bayes,{'alpha': 0.1},0.8221778221778222,0.8044270926348337,0.3627556001301855
+naive_bayes,{'alpha': 0.5},0.7962037962037962,0.7644871149938408,0.28262449987232685
+naive_bayes,{'alpha': 1.0},0.7802197802197802,0.7429402751796899,0.1474385999608785

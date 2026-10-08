@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "policy": {
+    "schema_version": 1,
+    "frozen": true,
+    "policy_version": "routing-v1-6f0251218d47",
+    "model_version": "logistic_regression-c8930a3dcf59",
+    "model_artifact_sha256": "c8930a3dcf5961b0c46a3a673d67b1cda4afb3951613cde83c3fab35bbeb6ff0",
+    "team_mapping_sha256": "29079b2c5068103134bcf2934f8dee8b368fe33a8355ca2c531653447ec4a91e",
+    "classes": [
+      "Refund_not_showing_up",
+      "activate_my_card",
+      "age_limit",
+      "apple_pay_or_google_pay",
+      "atm_support",
+      "automatic_top_up",
+      "balance_not_updated_after_bank_transfer",
+      "balance_not_updated_after_cheque_or_cash_deposit",
+      "beneficiary_not_allowed",
+      "cancel_transfer",
+      "card_about_to_expire",
+      "card_acceptance",
+      "card_arrival",
+      "card_delivery_estimate",
+      "card_linking",
+      "card_not_working",
+      "card_payment_fee_charged",
+      "card_payment_not_recognised",
+      "card_payment_wrong_exchange_rate",
+      "card_swallowed",
+      "cash_withdrawal_charge",
+      "cash_withdrawal_not_recognised",
+      "change_pin",
+      "compromised_card",
+      "contactless_not_working",
+      "country_support",
+      "declined_card_payment",
+      "declined_cash_withdrawal",
+      "declined_transfer",
+      "direct_debit_payment_not_recognised",
+      "disposable_card_limits",
+      "edit_personal_details",
+      "exchange_charge",
+      "exchange_rate",
+      "exchange_via_app",
+      "extra_charge_on_statement",
+      "failed_transfer",
+      "fiat_currency_support",
+      "get_disposable_virtual_card",
+      "get_physical_card",
+      "getting_spare_card",
+      "getting_virtual_card",
+      "lost_or_stolen_card",
+      "lost_or_stolen_phone",
+      "order_physical_card",
+      "passcode_forgotten",
+      "pending_card_payment",
+      "pending_cash_withdrawal",
+      "pending_top_up",
+      "pending_transfer",
+      "pin_blocked",
+      "receiving_money",
+      "request_refund",
+      "reverted_card_payment?",
+      "supported_cards_and_currencies",
+      "terminate_account",
+      "top_up_by_bank_transfer_charge",
+      "top_up_by_card_charge",
+      "top_up_by_cash_or_cheque",
+      "top_up_failed",
+      "top_up_limits",
+      "top_up_reverted",
+      "topping_up_by_card",
+      "transaction_charged_twice",
+      "transfer_fee_charged",
+      "transfer_into_account",
+      "transfer_not_received_by_recipient",
+      "transfer_timing",
+      "unable_to_verify_identity",
+      "verify_my_identity",
+      "verify_source_of_funds",
+      "verify_top_up",
+      "virtual_card_not_working",
+      "visa_or_mastercard",
+      "why_verify_identity",
+      "wrong_amount_of_cash_received",
+      "wrong_exchange_rate_for_cash_withdrawal"
+    ],
+    "temperature": 0.5858403312675197,
+    "threshold": 0.7,
+    "margin": 0.2,
+    "active": true,
+    "guard_version": "multi-team-clauses-v1",
+    "selection_reason": "Highest supported-request coverage meeting every prespecified target.",
+    "selection_partition": "policy.csv + policy_development challenges",
+    "partition_sha256": {
+      "calibration.csv": "9cc17bdd275577f9771c4b782b5a71163b6e86dd88179c36ed69a62c731804f3",
+      "policy.csv": "a2b17fad33cb3cec768304adf65fb628e7dfbd30cb610050b2ec807b24fd9351",
+      "label_mapping.json": "80a8ef353b2c35ea91aa4e36e480637cc7c89fc3f7ab84770b019f6eb3e48bdd",
+      "policy_development_challenge_ids_sha256": "60a74f5696f366e067c004303f0dea0a58e381d559e29385e6c7ff94328e68de"
+    },
+    "selection_targets": {
+      "minimum_accepted": 50,
+      "minimum_accepted_intent_accuracy": 0.95,
+      "minimum_accepted_team_accuracy": 0.95,
+      "minimum_challenge_group_review_recall": 0.75
+    }
+  },
+  "temperature_fit": {
+    "temperature": 0.5858403312675197,
+    "uncalibrated_nll": 0.6743292319909377,
+    "calibration_fitted_nll": 0.48490885587832083,
+    "optimizer_success": 1.0
+  },
+  "policy_development_selection": {
+    "active": true,
+    "threshold": 0.7,
+    "margin": 0.2,
+    "reason": "Highest supported-request coverage meeting every prespecified target.",
+    "selection_targets": {
+      "minimum_accepted": 50,
+      "minimum_accepted_intent_accuracy": 0.95,
+      "minimum_accepted_team_accuracy": 0.95,
+      "minimum_challenge_group_review_recall": 0.75
+    },
+    "eligible_candidates": 30,
+    "candidate_count": 36,
+    "policy_development": {
+      "threshold": 0.7,
+      "margin": 0.2,
+      "accepted": 830,
+      "coverage": 0.8291708291708292,
+      "intent_accuracy": 0.9590361445783132,
+      "team_accuracy": 0.9843373493975903,
+      "intent_correct": 796,
+      "team_correct": 817,
+      "challenge_groups": {
+        "ambiguous_supported": {
+          "records": 12,
+          "reviewed": 11,
+          "automatically_assigned": 1,
+          "review_recall": 0.9166666666666666
+        },
+        "clearly_unrelated": {
+          "records": 12,
+          "reviewed": 12,
+          "automatically_assigned": 0,
+          "review_recall": 1.0
+        },
+        "multi_intent": {
+          "records": 12,
+          "reviewed": 10,
+          "automatically_assigned": 2,
+          "review_recall": 0.8333333333333334
+        },
+        "nearby_unsupported_banking": {
+          "records": 12,
+          "reviewed": 12,
+          "automatically_assigned": 0,
+          "review_recall": 1.0
+        }
+      },
+      "eligible": true
+    }
+  },
+  "policy_candidates": 36,
+  "eligible_candidates": 30,
+  "calibration": {
+    "partition": "calibration.csv",
+    "records": 1001,
+    "fitted_global_temperature": 0.5858403312675197,
+    "fitted_sample_nll_before": 0.6743292319909377,
+    "fitted_sample_nll_after": 0.48490885587832083,
+    "warning": "Temperature was optimized on these same records; these are not held-out calibration-quality estimates."
+  },
+  "policy_partition_probabilistic_metrics": {
+    "partition": "policy.csv",
+    "records": 1001,
+    "raw_nll": 0.6564829270969949,
+    "temperature_scaled_nll": 0.43230843507428607,
+    "temperature_scaled_multiclass_brier_sum": 0.17108605699353996,
+    "top_label_reliability_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "records": 1,
+        "mean_confidence": 0.07250889362905145,
+        "observed_accuracy": 0.0
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "records": 10,
+        "mean_confidence": 0.15728374779823545,
+        "observed_accuracy": 0.0
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.30000000000000004,
+        "records": 18,
+        "mean_confidence": 0.2598432613927208,
+        "observed_accuracy": 0.3333333333333333
+      },
+      {
+        "lower": 0.30000000000000004,
+        "upper": 0.4,
+        "records": 26,
+        "mean_confidence": 0.3668438815711691,
+        "observed_accuracy": 0.5
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "records": 33,
+        "mean_confidence": 0.4547264351259046,
+        "observed_accuracy": 0.42424242424242425
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6000000000000001,
+        "records": 46,
+        "mean_confidence": 0.5484652439015674,
+        "observed_accuracy": 0.6521739130434783
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.7000000000000001,
+        "records": 35,
+        "mean_confidence": 0.6516884636672856,
+        "observed_accuracy": 0.6
+      },
+      {
+        "lower": 0.7000000000000001,
+        "upper": 0.8,
+        "records": 58,
+        "mean_confidence": 0.7541770404560529,
+        "observed_accuracy": 0.8275862068965517
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "records": 87,
+        "mean_confidence": 0.8546897621365583,
+        "observed_accuracy": 0.896551724137931
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "records": 687,
+        "mean_confidence": 0.9833421739169854,
+        "observed_accuracy": 0.9781659388646288
+      }
+    ]
+  },
+  "challenge_policy_development": {
+    "records": 48,
+    "by_group": {
+      "ambiguous_supported": {
+        "records": 12,
+        "reviewed": 11,
+        "automatically_assigned": 1,
+        "review_recall": 0.9166666666666666
+      },
+      "clearly_unrelated": {
+        "records": 12,
+        "reviewed": 12,
+        "automatically_assigned": 0,
+        "review_recall": 1.0
+      },
+      "multi_intent": {
+        "records": 12,
+        "reviewed": 10,
+        "automatically_assigned": 2,
+        "review_recall": 0.8333333333333334
+      },
+      "nearby_unsupported_banking": {
+        "records": 12,
+        "reviewed": 12,
+        "automatically_assigned": 0,
+        "review_recall": 1.0
+      }
+    },
+    "measure": "review recall only; all authored examples require review"
+  },
+  "heldout_challenges_and_official_test": "not read in the policy-fitting stage",
+  "notes": [
+    "One global temperature preserves the top-intent ranking; it is not an out-of-domain detector.",
+    "Threshold and margin were selected once on the policy partition and policy-development challenges.",
+    "No candidate meeting all targets creates an inactive review-only frozen policy.",
+    "The fixed multi-team clause detector is a heuristic and cannot detect every multi-intent request.",
+    "The authored challenges are diagnostic and not representative of a customer stream."
+  ]
+}

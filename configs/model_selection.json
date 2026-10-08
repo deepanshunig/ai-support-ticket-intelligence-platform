@@ -1,0 +1,14 @@
+{
+  "version": "selection-2026-10-08",
+  "selected_model": "logistic_regression",
+  "selected_artifact_sha256": "c8930a3dcf5961b0c46a3a673d67b1cda4afb3951613cde83c3fab35bbeb6ff0",
+  "selection_partition": "development",
+  "records": 1001,
+  "results": {
+    "logistic_regression": {"accuracy": 0.8671328671328671, "macro_f1": 0.8643792176111076},
+    "naive_bayes": {"accuracy": 0.8221778221778222, "macro_f1": 0.8044270926348337},
+    "frozen_distilbert": {"accuracy": 0.8581418581418582, "macro_f1": 0.8545008455452272}
+  },
+  "reason": "Logistic Regression has the highest development macro-F1 and accuracy, lower measured local latency, and smaller assets than frozen DistilBERT.",
+  "limit": "Development-selected result, not a final test estimate; DistilBERT encoder was frozen, not fine-tuned."
+}
